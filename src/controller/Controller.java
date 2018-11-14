@@ -35,21 +35,13 @@ public class Controller
 		userInput = JOptionPane.showInputDialog(null, "How many pockets does your sweater have?");
 		while(!validInt(userInput))
 		{
-		userInput = JOptionPane.showInputDialog(null, "You need to type in a whole number.");
-		
-		if(validInt(userInput)) 
-		{
-			
-			userSweater.setPockets(Integer.parseInt(userInput)); 
+			userInput = JOptionPane.showInputDialog(null, "You need to type in a whole number.");
 		}
 		
-		}
+		userSweater.setPockets(Integer.parseInt(userInput)); 
+
+		JOptionPane.showMessageDialog(null, "Your sweater is " + userSweater.getColor() + "." + "\nYou're sweater has a zipper? -->" + userSweater.getHasZipper() + "\nYour sweater has a hood? -->" + userSweater.getHasHood() + "\nYour sweater has " + userSweater.getPockets() + " pockets.");
 		
-		// Test the Code 
-		while(!isValid)
-		{
-			
-		}
 	}
 	
 	public boolean validInt(String maybeInt)
