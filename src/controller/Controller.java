@@ -7,13 +7,21 @@ public class Controller
 {
 	
 	private Sweater userSweater;
+	private Sweater[] sweaterArray;
+	
 	public void start()
 	{
-		info();
+		getInfo();
 	}
-	private void info()
+	
+	public Controller()
 	{
-		boolean isValid = false; 
+		sweaterArray = new Sweater[3];
+	}
+	
+	private void getInfo()
+	{
+	
 		
 		userSweater = new Sweater(); 
 		
@@ -35,13 +43,11 @@ public class Controller
 		userInput = JOptionPane.showInputDialog(null, "How many pockets does your sweater have?");
 		while(!validInt(userInput))
 		{
-			userInput = JOptionPane.showInputDialog(null, "You need to type in a whole number.");
+			userInput = JOptionPane.showInputDialog(null, "How many pockets does your sweater have?");
 		}
-		
 		userSweater.setPockets(Integer.parseInt(userInput)); 
 
 		JOptionPane.showMessageDialog(null, "Your sweater is " + userSweater.getColor() + "." + "\nYou're sweater has a zipper? -->" + userSweater.getHasZipper() + "\nYour sweater has a hood? -->" + userSweater.getHasHood() + "\nYour sweater has " + userSweater.getPockets() + " pockets.");
-		
 	}
 	
 	public boolean validInt(String maybeInt)
@@ -52,7 +58,7 @@ public class Controller
 			Integer.parseInt(maybeInt);
 			isValid = true;
 		}
-		catch (NumberFormatException error) //Two things inside perens is formal parameter
+		catch (NumberFormatException error) //Two things inside parens is formal parameter
 		{
 			JOptionPane.showMessageDialog(null, "You need to type in a whole number. :)");
 		}
