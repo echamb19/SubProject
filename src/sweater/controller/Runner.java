@@ -1,4 +1,4 @@
-package controller;
+package sweater.controller;
 
 public class Runner
 {

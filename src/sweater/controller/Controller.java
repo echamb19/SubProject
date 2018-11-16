@@ -1,13 +1,18 @@
-package controller;
+package sweater.controller;
 
-import javax.swing.JOptionPane; 
-import model.Sweater; 
+import javax.swing.JOptionPane;
+import sweater.model.Sweater; 
 
 public class Controller
 {
 	
 	private Sweater userSweater;
 	private Sweater[] sweaterArray;
+	Sweater yourSweater = new Sweater();
+	Sweater mySweater = new Sweater();
+	Sweater hisSweater = new Sweater();
+	Sweater herSweater = new Sweater();
+	
 	
 	public void start()
 	{
@@ -16,7 +21,12 @@ public class Controller
 	
 	public Controller()
 	{
-		sweaterArray = new Sweater[3];
+		sweaterArray = new Sweater[4];
+		
+		sweaterArray[0] = yourSweater;
+		sweaterArray[1] = mySweater;
+		sweaterArray[2] = hisSweater;
+		sweaterArray[3] = herSweater;
 	}
 	
 	private void getInfo()

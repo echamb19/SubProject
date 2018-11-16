@@ -1,4 +1,4 @@
-package model;
+package sweater.model;
 
 public class Sweater
 {
