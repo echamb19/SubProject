@@ -9,9 +9,10 @@ public class Controller
 	private Sweater userSweater;
 	private Sweater[] sweaterArray;
 	Sweater yourSweater = new Sweater();
-	Sweater mySweater = new Sweater();
+	//Sweater mySweater = new Sweater();
 	Sweater hisSweater = new Sweater();
 	Sweater herSweater = new Sweater();
+	private Sweater mySweater;
 	
 	
 	public void start()
